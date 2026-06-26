@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather ✦</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div class="mesh"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<div class="app">
+
+  <!-- SEARCH -->
+  <div class="search-card glass">
+    <div class="search-label">
+      <div class="brand-dot"></div>
+      Weather ✦
+    </div>
+    <div class="search-row">
+      <input class="search-inp" id="search-inp" type="text" placeholder="Search city…"/>
+      <button class="btn btn-search" onclick="search()">Search</button>
+      <button class="btn btn-locate" onclick="locate()">📍 Locate</button>
+    </div>
+    <div class="error-msg" id="error-msg"></div>
+  </div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="spinner"></div>
+    Fetching weather…
+  </div>
+
+  <!-- CURRENT -->
+  <div class="current-card glass" id="current-card">
+
+    <div class="city-row">
+      <div>
+        <div class="city-name" id="city-name"></div>
+        <div class="city-country" id="city-country"></div>
+      </div>
+      <div>
+        <div class="city-time" id="city-time"></div>
+        <div class="city-date" id="city-date"></div>
+      </div>
+    </div>
+
+    <div class="weather-main">
+      <div class="weather-icon" id="weather-icon"></div>
+      <div class="temp-block">
+        <div class="temp-val" id="temp-val"></div>
+        <div class="temp-feels" id="temp-feels"></div>
+      </div>
+    </div>
+
+    <div class="weather-desc" id="weather-desc"></div>
+
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-icon">💧</div>
+        <div class="stat-val" id="stat-humidity">—</div>
+        <div class="stat-lbl">Humidity</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon">💨</div>
+        <div class="stat-val" id="stat-wind">—</div>
+        <div class="stat-lbl">Wind</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon">🔵</div>
+        <div class="stat-val" id="stat-pressure">—</div>
+        <div class="stat-lbl">Pressure</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon">👁️</div>
+        <div class="stat-val" id="stat-visibility">—</div>
+        <div class="stat-lbl">Visibility</div>
+      </div>
+    </div>
+
+    <div class="sun-row">
+      <div class="sun-box">
+        <div class="sun-icon">🌅</div>
+        <div>
+          <div class="sun-lbl">Sunrise</div>
+          <div class="sun-val" id="sunrise">—</div>
+        </div>
+      </div>
+      <div class="sun-box">
+        <div class="sun-icon">🌇</div>
+        <div>
+          <div class="sun-lbl">Sunset</div>
+          <div class="sun-val" id="sunset">—</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FORECAST -->
+  <div class="forecast-card glass" id="forecast-card">
+    <div class="forecast-title">5 — Day Forecast</div>
+    <div class="forecast-list" id="forecast-list"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
